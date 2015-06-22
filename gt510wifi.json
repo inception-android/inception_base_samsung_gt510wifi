@@ -2,8 +2,7 @@
     "__extends__": "samsung.common", 
     "recovery": {
         "img": "img/recovery.img",
-        "stock": "img/recovery.img",
-        "__make__": true
+        "stock": "img/recovery.img"
     }, 
     "cache": {
         "out": "cache.img.ext4"
