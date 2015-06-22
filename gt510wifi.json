@@ -1,0 +1,43 @@
+{
+    "__extends__": "samsung.common", 
+    "recovery": {
+        "img": "img/recovery.img",
+        "stock": "img/recovery.img",
+        "__make__": true
+    }, 
+    "cache": {
+        "out": "cache.img.ext4"
+    },
+    "__config__": {
+        "target": {
+            "device": {
+                "brand": "samsung", 
+                "board": "msm8916", 
+                "name": "gt510wifi", 
+                "manufacturer": "samsung"
+            }, 
+            "mount": {
+                "cache": {
+                    "mount": "/cache", 
+                    "fs": "ext4", 
+                    "dev": "/dev/block/bootdevice/by-name/cache"
+                }, 
+                "boot": {
+                    "mount": "/boot", 
+                    "fs": "emmc", 
+                    "dev": "/dev/block/bootdevice/by-name/boot"
+                }, 
+                "system": {
+                    "mount": "/system", 
+                    "fs": "ext4", 
+                    "dev": "/dev/block/bootdevice/by-name/system"
+                }, 
+                "recovery": {
+                    "mount": "/recovery", 
+                    "fs": "emmc", 
+                    "dev": "/dev/block/bootdevice/by-name/recovery"
+                }
+            }
+        }
+    }
+}
